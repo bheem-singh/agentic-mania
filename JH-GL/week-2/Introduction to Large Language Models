@@ -1,0 +1,152 @@
+Introduction to Large Language Models
+
+After completing this week, you will be able to:
+
+1.	Understand foundation models, including transformers, attention mechanisms, and vector embeddings 
+2.	Recognize the capabilities, use cases, and limitations of LLMs (e.g., generative search, hallucinations) 
+3.	Understand the role and impact of fine-tuning and model adaptation 
+4.	Identify vulnerabilities in LLMs and strategies for risk mitigation
+5.	Understand the fundamentals of Prompt Engineering and why it is important.
+6.	Apply design principles to create effective prompts.
+
+Certainly! Here’s a detailed step-by-step outline of the fine-tuning process for large language models like ChatGPT or similar transformers. This aligns closely with your current module on fine-tuning and specialized large language models.
+
+---
+
+### **1. Define the Task and Objectives**
+   - **Decide** what specific task you want the model to perform (e.g., sentiment analysis, question-answering, summarization).
+   - **Specify objectives** and the kind of outputs you’re aiming for.
+
+### **2. Set Clear Performance Metrics**
+   - Identify how you’ll measure success (e.g., accuracy, F1 score, BLEU score for translation, etc.).
+   - These metrics will help you evaluate the model after fine-tuning.
+
+### **3. Select a Pre-trained Model**
+   - Choose a base model that fits your needs (e.g., GPT-3, Llama 2, etc.).
+   - Consider open-source models (Hugging Face, Meta’s Llama) or use API-based ones if customization is limited.
+
+### **4. Prepare a High-Quality Dataset**
+   - Collect and curate data relevant to your specific task.
+   - Format data in a way the model can ingest (commonly prompt-response pairs for language tasks).
+   - Clean, annotate, and split dataset into training, validation, and test sets.
+
+### **5. Tokenize and Preprocess Data**
+   - Convert text data into tokens (numbers the model understands) using the tokenizer compatible with your base model.
+   - Make sure formatting matches the requirements (e.g., max token length, prompt formatting).
+
+### **6. Configure the Training Environment**
+   - Set up hardware (often GPUs/TPUs), software libraries (e.g., PyTorch, TensorFlow, Hugging Face Transformers), and dependencies.
+   - Adjust environment variables as needed for reproducibility and performance.
+
+### **7. Initialize the Model**
+   - Load the pre-trained weights for your chosen base model.
+   - Set up model architecture for your specific task (e.g., classification head if needed).
+
+### **8. Configure Training Parameters**
+   - Choose settings like learning rate, batch size, number of epochs, optimization algorithms, and regularization techniques.
+   - Consider early stopping or checkpointing to prevent overfitting.
+
+### **9. Fine-Tune the Model**
+   - Train the model on your task-specific dataset, allowing it to adjust weights to better predict your target outputs.
+   - Monitor training and validation loss and adjust hyperparameters if necessary.
+
+### **10. Evaluate the Model**
+   - Test the model’s performance against the held-out validation and test sets using your selected metrics.
+   - Analyze errors to check for bias, overfitting, or underperformance on certain inputs.
+
+### **11. Iterate and Optimize**
+   - (Optional) Based on evaluation results, tweak data, parameters, or architecture as needed, and retrain for higher performance.
+
+### **12. Deploy and Monitor**
+   - Deploy your fine-tuned model in the production environment or integrate it into an application.
+   - Continuously monitor performance to catch any drift or new issues.
+
+---
+
+**Summary Table:**
+
+| Step                          | Description                                            |
+|-------------------------------|--------------------------------------------------------|
+| 1. Define Task & Objectives   | Clarify purpose of fine-tuning                         |
+| 2. Set Metrics                | Decide how you’ll measure success                      |
+| 3. Select Pre-trained Model   | Choose the right foundational model                    |
+| 4. Prepare Dataset            | Gather, clean, format task-specific data               |
+| 5. Tokenize & Preprocess      | Convert text to tokens, adjust formatting              |
+| 6. Configure Environment      | Set up hardware/software                               |
+| 7. Initialize Model           | Load model and configure for your task                 |
+| 8. Set Training Parameters    | Choose learning rate, batch size, etc.                 |
+| 9. Fine-Tune                  | Train the model                                        |
+| 10. Evaluate                  | Check accuracy and performance                         |
+| 11. Iterate                   | Refine approach based on results                       |
+| 12. Deploy & Monitor          | Integrate model and monitor ongoing performance        |
+
+---
+
+These steps are widely followed in the industry when customizing foundation models for specialized tasks, and this structured workflow closely follows current best practices discussed in your course.
+
+If you’d like a real-world example or sample code for any step, just let me know!
+
+
+
+
+
+
+Certainly! Here’s a layman-friendly explanation of **attention masks** with a practical example, linking directly to transformers and attention in your curriculum:
+
+---
+
+### **What is an Attention Mask?**
+
+- An **attention mask** is a tool used in transformer models to tell the model which parts of the input it should "pay attention" to and which parts it should "ignore" during processing.
+- It’s especially helpful when processing sequences (like sentences) of different lengths, where some parts might be padding or irrelevant.
+
+---
+
+### **Why Do We Need Attention Masks?**
+
+- AI models often require inputs to be of the same length, so shorter sentences are "padded" with special tokens (like zeros).
+- We don’t want the model to focus on these artificial padding tokens, so we use an attention mask to block them out.
+
+---
+
+### **Example**
+
+Suppose you have the following two sentences prepared as inputs:
+
+1. "AI is great"
+2. "Transformers are powerful tools"
+
+To make them the same length, you pad the shorter one:
+- **"AI is great" → ["AI", "is", "great", PAD, PAD]**
+- **"Transformers are powerful tools" → ["Transformers", "are", "powerful", "tools", PAD]**
+
+Here, **PAD** is a special padding token.
+
+**Corresponding attention masks:**
+- For "AI is great": `[1, 1, 1, 0, 0]`
+- For "Transformers are powerful tools": `[1, 1, 1, 1, 0]`
+
+**What it means:**
+- `1` means "pay attention to this token."
+- `0` means "ignore this token (it's padding)."
+
+---
+
+### **How Does the Model Use This?**
+- When calculating attention, the model looks at your mask. If it sees a `0`, it doesn’t consider that input token in its attention calculations, so predictions aren’t influenced by irrelevant padding.
+
+---
+
+**Summary Table:**
+
+| Input Tokens                          | Attention Mask    |
+|----------------------------------------|-------------------|
+| ["AI", "is", "great", PAD, PAD]        | [1, 1, 1, 0, 0]   |
+| ["Transformers", "are", "powerful", "tools", PAD] | [1, 1, 1, 1, 0] |
+
+---
+
+**In Your Curriculum:**  
+Attention masks are essential in transformer architectures, allowing models like ChatGPT to process batches of varying length inputs efficiently and accurately.
+
+If you’d like to see actual Python code for creating and using attention masks, just ask!

@@ -1,0 +1,48 @@
+Data Science and AI Landscape
+
+Great question! Here’s a concise comparison of Machine Learning, Data Science, Deep Learning, and Symbolic AI:
+
+---
+
+**1. Data Science**
+- **What:** An interdisciplinary field focused on extracting insights and knowledge from data using methods from statistics, mathematics, and computer science.
+- **Includes:** Data collection, cleaning, analysis, visualization, and decision-making.
+- **Techniques:** Uses machine learning, statistical modeling, data visualization, and more.
+
+**2. Machine Learning (ML)** - ML is an automated system that gets better  with more data and more data
+- **What:** A subset of AI involving algorithms that allow computers to learn patterns from data to make predictions or decisions without explicit programming.
+- **Where it fits:** Often used as a key toolset within data science projects.
+- **Examples:** Regression analysis, classification, clustering.
+
+**3. Deep Learning**
+- **What:** A specialized subset of machine learning that uses multi-layered neural networks to learn from large amounts of data.
+- **Strengths:** Excellent at handling unstructured data like images, audio, and natural language.
+- **Examples:** Image recognition, language translation (e.g., transformer models).
+
+**4. Symbolic AI**
+- **What:** An approach to AI that uses formal logic, explicit rules, and symbols to represent knowledge and reasoning processes.
+- **How it differs:** Unlike ML and deep learning (which learn from data), symbolic AI relies on predefined rules and logical operations.
+- **Examples:** Expert systems, rule-based systems, logic programming.
+
+---
+
+**Key Differences:**
+- **Scope:** Data science is broad (encompassing data analysis and interpretation), whereas ML and deep learning are focused on predictive modeling; symbolic AI relies on rule-based logic instead of pattern recognition.
+- **Approach:** Machine learning and deep learning are data-driven (statistical/probabilistic); symbolic AI is logic-driven.
+- **Application:** Deep learning is powerful for complex data (e.g., images), ML for structured data, symbolic AI for scenarios needing strict logical reasoning.
+
+---
+
+**Connection to Your Curriculum:**  
+This overview matches your module on "Artificial Intelligence Basics" and "Deep Learning" as well as your recent video covering the distinctions and integration of symbolic AI, machine learning, and deep learning.
+
+If you’d like, I can provide more industry examples of each or further detail how they interact in real-world AI systems. Let me know!
+
+
+
+
+ML VS Deep Learning - 
+
+Generative - generate new images, text like cat dog images
+vs 
+Discriminative - classifying if its a cat or a dog, its good or its bad

@@ -1,0 +1,37 @@
+2.04 : Introduction to Large Language Models (LLMs)
+
+1. GPT - 4 : Best for creative content
+2. Falcon  : Best for conversation
+3. Llama  2: Best for free, resource -lite, customization
+4. Gemini  : Google assistant
+5. Copilot : Microsoft Assistant
+6. Cloude 3: Large Context
+7. BERT    : Understanding
+
+
+“Poison search” refers to attempts to manipulate or corrupt the results returned by generative search engines or large language models (LLMs) by intentionally inserting misleading, biased, or malicious data into their training sources or influencing the information they reference during live searches.
+
+---
+
+### Key Points on Poison Search
+
+- **Definition:**  
+  Poison search is a form of attack or manipulation where adversaries inject false, biased, or adversarial content into the data ecosystem that models draw from (e.g., web content, forums, wikis), with the aim of having LLMs return these manipulations as trusted answers.
+
+- **How It Happens:**
+  - **Training Data Poisoning:** Malicious actors publish misinformation, spam, or bias on platforms scrapped for model training. If not detected and filtered, this bad data becomes part of the model’s learned responses.
+  - **Retrieval-Time Manipulation:** For models that reference live sources (e.g., some versions of Bing or ChatGPT with web browsing), attackers can promote or SEO-optimize false content to appear more credible or visible.
+
+- **Implications:**
+  - Search results from generative models may become unreliable or dangerously misleading.
+  - Detection and mitigation become critical—providers must filter, audit, and monitor for poisoned content.
+
+- **Real-World Example:**  
+  If enough false articles are published claiming a certain medication cures a disease and they rank high in web results, a generative AI might start citing them as sources—thus “poisoning” its answer.
+
+---
+
+**Connection to Your Curriculum:**  
+This topic closely aligns with your current module’s discussion on the “Challenges and Risks of Generative Search,” as well as ethical and technical concerns around model reliability and security.
+
+If you’d like more detail on technical defenses against poison search or how providers manage these risks, let me know!

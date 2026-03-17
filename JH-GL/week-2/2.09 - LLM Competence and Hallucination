@@ -1,0 +1,46 @@
+2.09 : LLM Competence and Hallucination
+
+Certainly! **Competence skills** in the context of large language models (LLMs) and generative AI refer to the set of abilities that allow an AI system to produce accurate, consistent, and contextually appropriate responses. These skills are essential for ensuring that the model’s outputs are reliable and align with both linguistic rules and real-world logic.
+
+---
+
+## Core Competence Skills in Generative AI
+
+1. **Linguistic Competence**
+   - **Definition:** The ability to generate responses that follow the formal rules of language (phonology, grammar, syntax, morphology, and semantics).
+   - **Examples:**  
+     - Producing grammatically correct sentences.
+     - Correct word formations (e.g., “unhappiness” is valid, “unhappyment” is not).
+
+2. **Functional Competence**
+   - **Definition:** The ability to perform logical reasoning, handle mathematical calculations, and process information contextually.
+   - **Examples:**  
+     - Answering arithmetic questions correctly.
+     - Drawing logical conclusions from a sequence of statements.
+
+3. **Social Reasoning**
+   - **Definition:** The capability to understand social contexts, intentions, beliefs, and perspectives of others (sometimes called “theory of mind”).
+   - **Examples:**  
+     - Recognizing that people may have different knowledge about a situation.
+     - Answering questions based on someone else’s perspective or background information.
+
+4. **Contextual Consistency**
+   - **Definition:** Maintaining relevance and accuracy across turns of conversation or within a document.
+   - **Examples:**  
+     - Staying on-topic in a discussion about renewable energy when asked follow-up questions.
+     - Giving consistent answers to similar questions within the same context.
+
+---
+
+## Why Are These Skills Important?
+
+- **Reliability:** Competence skills ensure that AI-generated information is trustworthy.
+- **Generalization:** They allow the model to apply knowledge to new, unseen scenarios.
+- **User Trust:** High competence reduces the risk of errors or hallucinations (fabricated information), thus increasing the likelihood that users will rely on the AI’s responses.
+
+---
+
+**Connection to Your Curriculum:**  
+You’ve just covered these concepts in your video lesson on “Competence and Hallucination in Large Language Models,” where you learned the value of linguistic, functional, and social competence, and how they distinguish correct responses from hallucinations.
+
+Would you like specific examples for each competence type, or tips on how to prompt models to better demonstrate these skills?
